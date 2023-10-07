@@ -1,0 +1,102 @@
+body {
+    background-color: #000;
+    overflow: hidden;
+}
+
+
+/*Teste Retirar*/
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100vw;
+
+}
+
+main .personagem {
+    display: none;
+    height: 100vh;
+}
+
+main .personagem.selecionado {
+    display: block;
+}
+
+/*Retirei o Object-fit: cover; Pois estava sumindo os olhos do Kang*/
+main .personagem .imagem {
+    width: 100%;
+    height: 100%;
+
+}
+
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 395px;
+    z-index: 1;
+
+}
+
+.conteudo .nome-personagem {
+    color: #fff;
+    font-size: 55px;
+    font-family: "Gabarito";
+    font-weight: 400;
+    margin-bottom: 5px;
+    width: 600px;
+}
+
+.conteudo .descricao {
+    color: #fff;
+    font-family: "AR One Sans";
+    line-height: 20px;
+
+}
+
+.conteudo .logo {
+    background-image: url(../imagens/Logo.png);
+    background-size: cover;
+    height: 100px;
+    width: 395px;
+    margin-bottom: 30px;
+}
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    min-height: 97vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: end;
+    gap: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+}
+
+.botoes .botao {
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.botoes .botao img {
+    border-radius: 45px;
+    box-shadow: 0 0 10px #fff;
+}
+
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #0768e7;
+}
